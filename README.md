@@ -8,12 +8,17 @@ the script uses a yaml config file, where the devices and commands are saved. it
 
 as device identification string i just used the MAC address of the mystrom button, all capital letters / no „:“ like mystrom do it.
 
+#### requirements:
+pip install pyyaml phue requests
+
+#### usage:
 request structure:
 `http://[srv-ip]/[MAC-ADDR-in-CAPS-JUST-NUMBERS-AND_A-F]/[eventname]`
 
 request example:
 `http://192.168.1.99/5CCF7F0BE2E2/single`
 
+#### usage with mystrom buttons:
 if you need to configure your mystrom button for this here is a quick demo how the code should look:
 `curl -v -d "single=get://192.168.4.119:8080/5CCF7F0C2EE6/single&double=get://192.168.4.119:8080/5CCF7F0C2EE6/double&long=get://192.168.4.119:8080/5CCF7F0C2EE6/long&touch=get://192.168.4.119:8080/5CCF7F0C2EE6/touch" http://192.168.4.110/api/v1/device/5CCF7F0C2EE6
 `
