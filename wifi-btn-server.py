@@ -81,7 +81,7 @@ def getButtonInfos(ip,mac):
 
 
 ############ HTTP SERVER ########################################################
-class antras_RQH(BaseHTTPRequestHandler):
+class auckenox_RQH(BaseHTTPRequestHandler):
   
   def log_message(self, format, *args):
     return False
@@ -141,7 +141,7 @@ class antras_RQH(BaseHTTPRequestHandler):
 
 def run():
   server_address = ('', server_port)
-  httpd = HTTPServer(server_address, antras_RQH)
+  httpd = HTTPServer(server_address, auckenox_RQH)
   httpd.serve_forever()
   
 if __name__ == '__main__':
