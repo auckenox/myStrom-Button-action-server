@@ -1,0 +1,57 @@
+server:
+  port: 8080
+  name: wifi-btn-server
+
+  hue_bridge_config:
+    address: hue.flm
+
+
+5CCF7E1EF8FF:
+  single:
+    action: hue
+    type: set_scene
+    scene: TV
+    group: Alles
+  
+  double:
+    action: hue
+    type: set_scene
+    scene: Max
+    group: WHZ
+
+  long:
+    action: hue
+    type: set_scene
+    scene: Schlafen
+    group: Bedroom
+
+
+5CCF7F0EF3E6:
+  single:
+    action: hue
+    type: set_scene
+    scene: Grell
+    group: Alles
+  
+  double:
+    action: hue
+    type: set_scene
+    scene: Grell
+    group: Alles
+
+  long:
+    action: url
+    url: "http://myurl.xy"
+  
+  touch:
+    action: hue
+    type: set_scene
+    scene: Sunrise
+    group: Alles
+  
+
+
+
+
+
+
